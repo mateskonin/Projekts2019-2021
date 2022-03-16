@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt modal - popup</title>
+    <style>
+        .article {
+            margin: 0 auto;
+            width: 70%;
+            max-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .article.blur {
+            filter: blur(2px);
+        }
+
+        img {
+            max-width: 35vw;
+            min-width: 240px;
+            margin: 20px auto;
+
+
+        }
+
+        button {
+            margin: auto;
+        }
+
+        .modal-wrap {
+            transition: 0.5s linear;
+        }
+
+        .modal-wrap.active {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            /* display: none; */
+        }
+
+        .modal-wrap.active .modal {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            border: 2px solid black;
+        }
+
+        @media(orientation: portrait) {
+            .modal-wrap.active .modal {
+                width: 90%;
+                height: 90%;
+            }
+        }
+
+        .modal .top {
+            background-color: white;
+            flex-basis: 20%;
+        }
+
+        .modal .middle {
+            background-color: black;
+            flex-grow: 1;
+        }
+
+        .modal .bottom {
+            background-color: white;
+            flex-basis: 20%;
+        }
+
+        span {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 25px;
+            font-family: arial;
+            background-color: rgb(105, 102, 102);
+            border-radius: 50%;
+            border: 2px solid black;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            display: none;
+        }
+
+        span:hover {
+            cursor: pointer;
+        }
+
+        .active span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="article">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti quas praesentium est officiis laboriosam
+            delectus reprehenderit nam provident, dolorum facilis dolores nulla, animi commodi, quidem quis ipsam. Quas,
+            provident obcaecati.</p>
+        <button>Kup teraz</button>
+        <img src="hamburg.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ratione necessitatibus incidunt omnis, eveniet
+            aut magni, quod praesentium voluptate saepe dolorum corrupti voluptas beatae expedita laboriosam unde
+            aperiam non corporis?</p>
+
+    </section>
+    <section class="modal-wrap">
+        <div class="modal">
+            <span>X</span>
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </div>
+        <wrap></wrap>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
