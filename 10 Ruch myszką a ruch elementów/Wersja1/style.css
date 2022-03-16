@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    animation: fog 20s linear infinite;
+}
+.balloon-animation {
+    /* background-color: rgb(2, 2, 27); */
+    background-image: url(img/sea.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+}
+.flying-cloud {
+    position: absolute;
+    width: 20%;
+    
+}
+
+
+.flying-balloon{
+    position: absolute;
+    width: 15%;
+    top: 20%;
+    left: 50%;
+}
+
+.flying-cloud:nth-child(1){
+    top: 25%;
+    left: 60%;
+    z-index: 1;
+    transform: rotate(0deg);
+    animation: cloudMove 30s linear infinite, cloudShake 5s ease-out infinite alternate-reverse ;
+    /* animation: cloudShake 5s linear infinite alternate-reverse ; */
+}
+.flying-cloud:nth-child(2){
+    top: 10%;
+    left: 30%;
+    
+}
+.flying-cloud:nth-child(3){
+    top: 50%;
+    left:45%;
+}
+.flying-cloud:nth-child(4){
+    top: 66%;
+    left: 20%;
+    
+}
+.flying-cloud:nth-child(5){
+    top: 70%;
+    left: 35%;
+    z-index: 1;
+}
+.flying-cloud:nth-child(6){
+    top: 55%;
+    left: 60%;
+    
+}
+.flying-cloud:nth-child(7){
+    top: 26%;
+    left: 60%;
+    
+}
+.remove-cloud{
+    display: none;
+    /* animation: cloud 0.2s linear; */
+    
+}
+
+/* @keyframes cloud{
+    0%{
+        transform: rotate(0);
+        
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+
+@keyframes fog{
+    0%{
+        opacity: 0.55;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    40%{
+        opacity:1;
+    }
+    60%{
+        opacity:1;
+    }
+    100% {
+        opacity: 0.55;
+    }
+}
+
+@keyframes cloudMove{
+    0%{
+        left: -40%;
+    }
+    40%{
+        left: 30%;
+    }
+    80%{
+        left:85%;
+    }
+    100%{
+        left: 140%;
+    }
+}
+
+@keyframes cloudShake{
+    0%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes cloudsUpDown{
+    100%{
+
+    }
+}

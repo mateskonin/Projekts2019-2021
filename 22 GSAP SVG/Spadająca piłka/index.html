@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>
+        <GSAP-1></GSAP-1>
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --size: 150px
+        }
+
+        body {
+            background-color: coral;
+        }
+
+        .ball {
+            position: absolute;
+            width: var(--size);
+            height: var(--size);
+            border-radius: 50%;
+            background-color: crimson;
+            bottom: calc(100% - var(--size));
+            left: calc(50% - var(--size)/2);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        TweenMax.to(".ball", 3, { ease: "bounce", y: window.innerHeight - 150, repeat: -1 })
+    </script>
+</body>
+
+</html>

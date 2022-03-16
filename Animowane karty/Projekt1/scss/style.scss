@@ -1,0 +1,93 @@
+* {
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Comic Neue', cursive;
+    background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
+}
+
+.cards {
+    display: flex;
+    width: 1000px;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    height: 800px;
+    width: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+
+}
+
+.one {
+    background-image: url("../img/girl-g722306065_1920.jpg");
+}
+
+.two {
+    background-image: url("../img/girl-g9f38a18f3_1920.jpg");
+}
+
+button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    padding: 1px;
+    // padding: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 36px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    cursor: crosshair;
+    z-index: 3;
+}
+
+
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 80px 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    clip-path: circle(0% at 50% 90%);
+    // visibility: hidden;
+    transition: clip-path 2s;
+}
+
+button:hover+.text {
+    clip-path: circle(50% at 50% 90%);
+
+}
+
+h1 {
+    color: gold;
+
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: silver;
+}
