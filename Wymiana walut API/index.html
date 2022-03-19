@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Aplikacja zamiany kursów</h1>
+        <p>Sprawdź aktualne kursy walut!</p>
+
+        <div class="app-body">
+
+            <div class="section-left">
+
+                <input type="number" value="1" class="amount-one">
+
+                <select name="" id="currency-one">
+                    <option value="PLN" selected>PLN</option>
+                    <option value="USD">USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CHF">CHF</option>
+                </select>
+
+            </div>
+
+            <button class="swap">Zamień</button>
+
+            <div class="section-right">
+
+                <input type="number" class="amount-two">
+
+                <select name="" id="currency-two">
+                    <option value="PLN">PLN</option>
+                    <option value="USD" selected>USD</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="CHF">CHF</option>
+                </select>
+
+            </div>
+        </div>
+
+        <p class="rate-info"></p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
