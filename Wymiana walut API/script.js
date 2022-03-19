@@ -21,7 +21,7 @@ const calculate = () => {
 }
 
 const change = () => {
-    // Stworzenie dodatkowej zmiennej z ta samą warością
+    // Stworzenie dodatkowej zmiennej z ta samą warości
     const first = currencyOne.value
     currencyOne.value = currencyTwo.value
     currencyTwo.value = first
