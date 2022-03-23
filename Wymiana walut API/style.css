@@ -79,7 +79,7 @@ select {
 
 @media (max-width: 650px) {
     .swap {
-        margin-top: 10px;
+        margin: 10px 80px;
         order: 3;
     }
 }
