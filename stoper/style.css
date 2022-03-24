@@ -7,7 +7,14 @@
 
 :root {
     --first-color: #FA1406;
+    /* --first-color: #117e11; */
     --second-color: #D2C7BE;
+}
+
+:root.light {
+    --first-color: #a323b4;
+    --second-color: #271d15;
+
 }
 
 body {
@@ -27,23 +34,38 @@ body {
     flex-direction: column;
     padding: 50px;
     width: 800px;
-    background-image: radial-gradient(circle, rgb(21, 50, 110) 0%, rgb(25, 25, 25) 93%);
+    background-image: radial-gradient(circle, rgb(181, 218, 19) 0%, rgb(54, 39, 39) 93%);
     border-radius: 8px;
     color: #fff;
     box-shadow: 5px 5px 10px black;
 }
 
-.info {
+.wrapper.light {
+    background-image: radial-gradient(circle, rgb(21, 50, 110) 0%, rgb(25, 25, 25) 93%);
+
+}
+
+.info,
+.colors {
     position: absolute;
     top: 6px;
-    right: 14px;
     padding: 20px;
     font-size: 24px;
     cursor: pointer;
     transition: color .3s;
 }
 
-.info:hover {
+.info {
+    right: 14px;
+
+}
+
+.colors {
+    left: 14px;
+}
+
+.info:hover,
+.colors:hover {
     color: var(--first-color);
 }
 
@@ -90,6 +112,14 @@ button {
 
 button:hover {
     background-color: var(--first-color);
+}
+
+.time-list {
+    display: none;
+}
+
+.time-list.show {
+    display: block;
 }
 
 .time-list li {
